@@ -13,19 +13,23 @@ const Header = ({ setMovieId }) => {
     if (showResults === false) {
       setShowResults(true);
     }
-    if (showResults === true && term === '') {
-      setShowResults( false)
+    if (showResults === true && term === "") {
+      setShowResults(false);
     }
   }
 
   return (
-    <header className="w-full my-6 flex justify-between">
-      <a className="flex-1 px-4" href="./" title="TMDB Movie Search">
-        <img className="max-w-8.75" src={logo} alt="TMDB Logo" />
+    <header className="max-w-5xl mx-auto sm:flex sm:justify-between sm:gap-4">
+      <a
+        className="flex justify-center align-middle py-2"
+        href="./"
+        title="TsmB Movie Search"
+      >
+        <img className="w-36" src={logo} alt="TMDB Logo" />
       </a>
 
-      <div className="max-w-xl w-full text-white">
-        <form className="relative">
+      <div className="text-white p-4 flex align-middle animate-slideInLeft sm:p-0 sm:w-7/12">
+        <form className="relative w-full ">
           <input
             className={styles.searchInput}
             type="text"
